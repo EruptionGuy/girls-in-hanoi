@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FILM</title>
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Leaflet -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      crossorigin=""
+    ></script>
+    <!-- MarkerCluster -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="wrap brand">
+        <div class="brand-title">
+          <div class="dot"></div>
+          <div>
+            <h1>Girls in Hanoi</h1>
+            <div class="sub">project space • mapping • reading • images</div>
+          </div>
+        </div>
+        <nav class="header-nav" id="main-nav">
+          <a href="index.html">HOME</a>
+          <a href="film.html">FILM</a>
+          <a href="philosophy.html">PHILOSOPHY</a>
+          <a href="about.html">ABOUT ME</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="wrap card" style="margin-top:12px">
+        <section class="video-section">
+          <h2 class="video-title">The Hands That Shape The World</h2>
+
+          <div class="video-container">
+            <iframe
+              src="https://drive.google.com/file/d/1XiVP8ispQVzcdg6ftOOw_mTHES9-xehZ/preview"
+              title="The Hands That Shape The World"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+
+          <p class="video-description">
+            Hanoi is built as much by policies as by palms — the hands that
+            raise scaffolds, wash sidewalks, pass books, soothe children. My
+            camera stayed close to those hands, as if tracing the heartbeat of
+            urban life through its smallest motions. There’s something about
+            Hanoi’s rhythm; it’s always moving, but never rushing. Morning
+            markets, afternoon classrooms, evening homes. Their gestures repeat,
+            but each repetition changes slightly, like the pulse of the city
+            itself evolving gently through touch. It came to me how their hands
+            contained both exhaustion and grace — a duality that modern cities
+            often erase in their pursuit of efficiency. You could read entire
+            histories in those movements: the decades of rebuilding after war,
+            the inheritance of care, the quiet persistence that outlasts
+            policies and skylines. A city doesn’t just expand upward
+            economically or in any rigorous means, it expands through the reach
+            of those who hold it together every single day. <br>In Hanoi, it’s by
+            these women's hands.
+          </p>
+        </section>
+      </div>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const currentPage = window.location.pathname.split("/").pop();
+        const navLinks = document.querySelectorAll("#main-nav a");
+
+        navLinks.forEach((link) => {
+          const linkPage = link.getAttribute("href");
+          if (linkPage === currentPage) {
+            link.classList.add("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

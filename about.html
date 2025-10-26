@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ABOUT ME</title>
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Leaflet -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      crossorigin=""
+    ></script>
+    <!-- MarkerCluster -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="wrap brand">
+        <div class="brand-title">
+          <div class="dot"></div>
+          <div>
+            <h1>Girls in Hanoi</h1>
+            <div class="sub">project space • mapping • reading • images</div>
+          </div>
+        </div>
+        <nav class="header-nav" id="main-nav">
+          <a href="index.html">HOME</a>
+          <a href="film.html">FILM</a>
+          <a href="philosophy.html">PHILOSOPHY</a>
+          <a href="about.html">ABOUT ME</a>
+        </nav>
+      </div>
+    </header>
+    <section class="hero">
+      <img
+        class="bg"
+        alt="An Thy"
+        src="./photos/me.png"
+      />
+      <div class="veil" id="about"></div>
+      <div class="center">
+        <div class="strap">
+          <p>
+            My name is An Thy, a highschool senior from Hanoi, Vietnam. I was
+            born and raised in Hanoi, where every street carries a story — yet
+            only a few carry women’s names.
+          </p>
+          <p>
+            “Girls in Hanoi” began as a curiosity: why do so few streets in my
+            city bear women’s names and what stories hide behind the ones that
+            do? But over time, it became something larger—an ongoing project
+            about visibility, safety, and belonging. It’s part research, part
+            archive, and part love letter to Hanoi’s women: those who built,
+            walked, and still navigate the city in quiet strength. I walk the
+            same roads my grandmother once sold bánh cuốn on, the same roads
+            built by women whose names never reached a street sign. Between the
+            noise of motorbikes and the dusk-colored air, I look for the women
+            who shaped this place — not always seen, but always present. In this
+            project, I blend data, photography, and narrative to map not only
+            where women are remembered, but how they exist today. Each page on
+            this site holds a fragment of that story. I don’t claim to represent
+            every woman’s experience, but I hope this project invites you to
+            look closer to the street signs you pass, the corners you overlook,
+            and the everyday resilience that fills them.
+          </p>
+          <p>
+            This is my Hanoi, told through the eyes of its girls, past and
+            present.
+          </p>
+        </div>
+      </div>
+    </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const currentPage = window.location.pathname.split("/").pop();
+        const navLinks = document.querySelectorAll("#main-nav a");
+
+        navLinks.forEach((link) => {
+          const linkPage = link.getAttribute("href");
+          if (linkPage === currentPage) {
+            link.classList.add("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

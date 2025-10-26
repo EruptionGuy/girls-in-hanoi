@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PHILOSOPHY</title>
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Leaflet -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      crossorigin=""
+    ></script>
+    <!-- MarkerCluster -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="wrap brand">
+        <div class="brand-title">
+          <div class="dot"></div>
+          <div>
+            <h1>Girls in Hanoi</h1>
+            <div class="sub">project space • mapping • reading • images</div>
+          </div>
+        </div>
+        <nav class="header-nav" id="main-nav">
+          <a href="index.html">HOME</a>
+          <a href="film.html">FILM</a>
+          <a href="philosophy.html">PHILOSOPHY</a>
+          <a href="about.html">ABOUT ME</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="wrap card" style="margin-top:12px">
+        <article class="article-content">
+          <h2 class="article-title">
+            The Ethics of Urban Form: Recognition and Absence in Hanoi's Streetscape
+          </h2>
+
+          <h3>The Urban Language of Remembrance</h3>
+          <p>
+            Street naming is an urban language. Maps tell us who the city
+            chooses to remember and whose labor is absorbed into the collective.
+            When a woman’s name appears on a sign in Hanoi, it feels sacred—a
+            rare moment when her invisible contribution becomes tangible.
+          </p>
+          <p>
+            The scarcity of these names, however, is equally revealing. It
+            implies that women's stories have often been honored through the
+            collective contributions—the tea, the rice, a sustained family—rather
+            than as individual brilliance. Their endurance has built the very
+            rhythm of Hanoi, but their legacy rarely earns a plaque.
+          </p>
+          <p>
+            The city’s architecture is not just French facades and colonial
+            relics; it is also the invisible scaffolding of care that women
+            maintain daily: the early market stalls, the patience that holds
+            chaos at bay.
+          </p>
+
+          <h3>A Constellation of Strength</h3>
+          <p>
+            The few streets named after women embody this paradox: few, yet
+            pulsing with life. They remind us that visibility is not about
+            numbers, but about essence.
+          </p>
+          <p>
+            <strong>Hai Bà Trưng:</strong> A grand boulevard echoing the story
+            of the twin sisters who led an uprising, their defiance spanning
+            centuries. <br />
+            <strong>Bà Triệu:</strong> A gentler street where her spirit of
+            defiance lingers in the breeze. <br />
+            <strong>Nguyễn Thị Minh Khai:</strong> Her name belongs to modernity,
+            representing progress, independence, and education.
+          </p>
+          <p>
+            Together, they form a quiet constellation—a philosophy of female
+            strength written into the city’s geography.
+          </p>
+
+          <h3>Beyond the Map: A Philosophy of Work</h3>
+          <p>
+            Girls in Hanoi was born from this observation, a form of listening
+            to what is absent. My philosophy of work is rooted in presence and
+            observation: to look at what is missing and recognize that absence
+            itself is a powerful narrative. In a city where women’s names are so
+            few on signs, my work seeks to create other forms of
+            recognition—through narratives, images, and conversations.
+          </p>
+          <p>
+            Walking Bà Triệu Street, I see the philosophy of the feminine city:
+            not fragile, but balanced; not ornamental, but fundamentally
+            grounding. The street’s rhythm is deliberate and free, mirroring the
+            cadence of women’s work—the steaming of rolls, the stitching of
+            fabric, the quiet, sustaining thought. These are not small acts;
+            they are the architecture of living.
+          </p>
+          <p>
+            Perhaps Hanoi has always understood this: women’s immortality is
+            made of softer things—the scent of cốm, the sound of laughter, the
+            patience that sustains life.
+          </p>
+          <p>
+            I don't dream of building new streets. I dream of naming the ones
+            already there: the invisible roads women walk every day—between home
+            and market, love and labor. Every woman is a street of her own,
+            carrying stories and meanings that deserve to be mapped.
+          </p>
+          <p>
+            Ultimately, Hanoi teaches a simple lesson: presence is measured not
+            by public acclaim, but by how deeply your work becomes an integral
+            part of a place. To walk through this city is to walk through
+            women’s work—patient, uncredited, and beautiful—the work that keeps a
+            city alive.
+          </p>
+        </article>
+      </div>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const currentPage = window.location.pathname.split("/").pop();
+        const navLinks = document.querySelectorAll("#main-nav a");
+
+        navLinks.forEach((link) => {
+          const linkPage = link.getAttribute("href");
+          if (linkPage === currentPage) {
+            link.classList.add("active");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
