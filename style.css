@@ -1,3 +1,34 @@
+@font-face {
+  font-family: 'Georgia Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Georgia Regular'), url('georgia.woff') format('woff');
+  }
+  
+
+  @font-face {
+  font-family: 'Georgia Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Georgia Italic'), url('georgiai.woff') format('woff');
+  }
+  
+
+  @font-face {
+  font-family: 'Georgia Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Georgia Bold'), url('georgiab.woff') format('woff');
+  }
+  
+
+  @font-face {
+  font-family: 'Georgia Bold Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Georgia Bold Italic'), url('georgiaz.woff') format('woff');
+  }
+
 :root {
   --ink: #1a1217; /* deep plum */
   --bg: #0f0b10; /* page bg */
@@ -60,12 +91,13 @@ header {
   display: flex;
   gap: 10px;
   align-items: center;
-  font-family: "Blosta Script";
+  font-family: "Georgia Bold";
 }
 .dot {
   width: 26px;
   height: 26px;
   border-radius: 6px;
+  border: 2px solid #fff2;
   background: conic-gradient(
     from 0deg,
     var(--pink),
@@ -73,7 +105,6 @@ header {
     var(--lav),
     var(--pink)
   );
-  border: 2px solid #fff2;
 }
 .brand h1 {
   font-size: 16px;
@@ -158,7 +189,7 @@ header {
   padding: 0 16px;
 }
 .title {
-  font-family: "Blosta Script";
+  font-family: "Georgia Bold";
   font-weight: 900;
   letter-spacing: 0.04em;
   font-size: clamp(38px, 8vw, 96px);
@@ -181,7 +212,7 @@ header {
   margin: 14px auto 0;
   color: #f3dceb;
   font-size: clamp(14px, 2.4vw, 18px);
-  font-family: "BodoniFLF";
+  font-family: "Georgia Regular";
 }
 .cta {
   display: flex;
@@ -318,7 +349,7 @@ section#map {
 }
 
 .video-title {
-  font-family: "Blosta Script";
+  font-family: "Georgia Regular";
   font-weight: 800;
   font-size: clamp(28px, 5vw, 48px);
   margin: 0 0 24px 0;
@@ -344,7 +375,7 @@ section#map {
 }
 
 .video-description {
-  font-family: "BodoniFLF";
+  font-family: "Georgia Regular";
   margin: 24px 0 0 0;
   font-size: 16px;
   color: var(--muted);
@@ -359,7 +390,7 @@ section#map {
 }
 
 .article-title {
-  font-family: "Blosta Script";
+  font-family: "Georgia Regular";
   font-weight: 800;
   font-size: clamp(32px, 6vw, 56px); /* Responsive title font size */
   line-height: 1.1;
@@ -372,7 +403,7 @@ section#map {
 }
 
 .article-content h3 {
-  font-family: "Blosta Script";
+  font-family: "Georgia Regular";
   font-weight: 700;
   font-size: 24px;
   color: var(--rose);
@@ -382,7 +413,7 @@ section#map {
 }
 
 .article-content p {
-  font-family: "BodoniFLF";
+  font-family: "Georgia Regular";
   font-size: 17px;
   line-height: 1.8;
   color: var(--muted);
@@ -392,4 +423,42 @@ section#map {
 .article-content strong {
   color: var(--text);
   font-weight: 600;
+}
+
+h2 {
+  font-size: 200%;
+}
+
+.sendyourstory h2 {
+  text-align: center; 
+}
+
+.sendyourstory {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px 0;
+}
+
+.sendyourstory form {
+  display: flex;
+}
+
+.email {
+  border: 0;
+  border-radius: 6px 0 0 6px;
+  padding: 1rem;
+  font-size: 110%;
+  background-color: #2d2233;
+  width: 25vw;
+  display: block;
+}
+
+.send {
+  border: 0;
+  border-radius: 0 6px 6px 0;
+  padding: 1rem;
+  font-size: 110%;
+  display: block;
+  background: linear-gradient(90deg, var(--pink), var(--pink-2));
 }
